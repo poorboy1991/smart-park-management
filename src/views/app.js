@@ -10,6 +10,6 @@ import Router from '@/router/index' // 路由组件
 
 export default function RootContainer() {
   return (
-      <Routers />
+      <Router />
   );
 }

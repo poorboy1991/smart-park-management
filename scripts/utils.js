@@ -10,7 +10,8 @@ exports.cssLoaders = function(options) {
     const cssLoader = {
         loader: 'css-loader',
         options: {
-            sourceMap: options.sourceMap
+            sourceMap: options.sourceMap,
+            modules: true,
         }
     }
     
@@ -44,7 +45,7 @@ exports.cssLoaders = function(options) {
     return {
         css: generateLoaders(),
         postcss: generateLoaders(),
-        less: generateLoaders('less', { lessOptions: { javascriptEnabled: true }}),
+        less: generateLoaders('less', { lessOptions: { javascriptEnabled: true, modules: true }}),
         sass: generateLoaders('sass', {
             indentedSyntax: true
         }),
